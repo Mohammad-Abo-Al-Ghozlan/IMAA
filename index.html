@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">IMAA</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Empowering Your Digital Future</h1>
+            <p>Expert solutions in computer repair, web, mobile, and desktop app development</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive tech solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Computer Repair</h3>
+                    <p>Expert hardware and software troubleshooting for all devices</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom, responsive websites built with cutting-edge technologies</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Apps</h3>
+                    <p>Innovative iOS and Android applications for your business</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Desktop Software</h3>
+                    <p>Powerful, user-friendly desktop applications to boost productivity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>Dedicated professionals committed to your success</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/a1.jpg" alt="Team Member 1">
+                    <h3>Ahmad Hussairami</h3>
+                    <p>Hardware Specialist</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/a1.jpg" alt="Team Member 2">
+                    <h3>Mohammad Abo Al Ghozlan</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/a1.jpg" alt="Team Member 3">
+                    <h3>Ibrahim Diab</h3>
+                    <p>Full-Stack Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="img/a1.jpg" alt="Team Member 4">
+                    <h3>Akram Saeed</h3>
+                    <p>Networking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: abo.al.ghozlan.mohammad@gmail.com</p>
+            <p>Phone: 00 961 81 985 614</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            const scrollWatcher = () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            };
+            window.addEventListener('scroll', scrollWatcher);
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
